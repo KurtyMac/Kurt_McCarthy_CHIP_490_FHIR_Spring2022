@@ -1,12 +1,14 @@
 # Kurt_McCarthy_CHIP_490_FHIR_Spring2022
 This repository is for the coursework/assignments for CHIP490_490_Spring2022_UNC
 Welcome to Kurt McCarthy's Repository for CHIP490
+<div></div>
 
-<title>Data Topics of Interest:</title> 
+<b>Data Topics of Interest</b> 
 
 <b>Population Health Based Statistics:</b> Addressing health equity and disparities for populations that receive sub-standard medical care. There are specific populations that lack proper access to health care within our nation, I would like to run statistical algorithms such as k-means clsuter analysis and regression to infer why these population recieve worse care than others. 
 
 <b>Machine Learning Utilization for Health Diagnosis & Treatment:</b> Utilize machine learning to evaluate medical reports, lab results, imagining, and biomarkers to help predict the chances of disease or diagnose the type of disease.  
+<div></div>
   
 <title>Project Ideas:</title>
   
