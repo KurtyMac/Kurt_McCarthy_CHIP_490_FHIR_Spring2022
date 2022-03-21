@@ -9,9 +9,8 @@ Welcome to Kurt McCarthy's Repository for CHIP490
 
 <b>Machine Learning Utilization for Health Diagnosis & Treatment:</b> Utilize machine learning to evaluate medical reports, lab results, imagining, and biomarkers to help predict the chances of disease or diagnose the type of disease.  
 <div></div>
+<b>Project Ideas:<b>
   
-<title>Project Ideas:</title>
-  
- <b>Increase Military Medical Readiness Through Data Analysis Dashboard:</b> Data mine military readiness records to infer why injuries are occurring to come up with plans to decrease injury rates and unnecessary disease progression. Create a dashboard that commanders can utilize to see the exact reason why their unit readiness is low. For example, “increased muscle skeletal injuries, finding out that the running surface at the unit level is concreate”. 
+<b>Increase Military Medical Readiness Through Data Analysis Dashboard:</b> Data mine military readiness records to infer why injuries are occurring to come up with plans to decrease injury rates and unnecessary disease progression. Create a dashboard that commanders can utilize to see the exact reason why their unit readiness is low. For example, “increased muscle skeletal injuries, finding out that the running surface at the unit level is concreate”. 
 
 
