@@ -1,0 +1,66 @@
+# Prompting the user to enter the number of people attending the event
+# NoOfPeople will store the total number of people attending the event
+import math
+
+NoOfPeople = input('Enter the number of people attending the event: ')
+
+# Prompting the user to enter the number of donuts for each person
+# DonPerPerson will store the total number of donuts for each person
+
+DonPerPerson = input('Enter the number of donuts for each person: ')
+
+# using isnumeric() to check if the input is a numeric value
+
+# isnumeric() will return true if the input is a number and false if not
+
+# checking if NoOfPeople and DonPerPerson are both valid numeric input
+
+if (NoOfPeople.isnumeric() and DonPerPerson.isnumeric()):
+
+    # DonPerBox will store the number of donuts per box (12 in this case)
+
+    DonPerBox = 12
+
+    # total number of donuts is calculated by multiplying the
+    # NoOfPeople with the value of DonPerPerson and stored in TotalDonuts
+
+    # int() is used to convert the input string into an integer value
+
+    TotalDonuts = int(NoOfPeople) * int(DonPerPerson)
+
+    # minumum boxes of donuts is calculated by dividing the TotalDonuts
+    # by 12 and then finding the ceil() of the result
+
+    # example - ceil(10.6) = 11
+    # example - ceil(11.1) = 12
+
+    MinBoxesNeeded = math.ceil(TotalDonuts / 12)
+
+    # total leftover donuts is calculated by finding the total number
+    # of donuts in MinBoxesNeeded and subtracting TotalDonuts from it
+
+    DonLeftOver = (MinBoxesNeeded * 12) - TotalDonuts
+
+    # using the if-elif-else to calculate the donut cost
+    # based on the number of boxes needed
+
+    if 1 <= MinBoxesNeeded <= 5:
+        DonCost = MinBoxesNeeded * 8.0
+    elif 6 <= MinBoxesNeeded <= 20:
+        DonCost = MinBoxesNeeded * 7.5
+    else:
+        DonCost = MinBoxesNeeded * 6.0
+
+    # printing the results as per the requirement
+
+    print('Minimum boxes of donut needed: ', MinBoxesNeeded)
+    print('Donuts left over: ', DonLeftOver)
+    print('Donuts cost: ', DonCost)
+
+# else part will be executed if the inputs are not a valid
+
+else:
+    if (NoOfPeople.isnumeric() == False):
+        print(NoOfPeople, ' is not a valid number')
+    if (DonPerPerson.isnumeric() == False):
+        print(DonPerPerson, ' is not a valid number')
