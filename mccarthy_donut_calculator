@@ -1,66 +1,51 @@
-# Prompting the user to enter the number of people attending the event
-# NoOfPeople will store the total number of people attending the event
+#prom user on amount of people attending event
 import math
 
-NoOfPeople = input('Enter the number of people attending the event: ')
+number_of_people = input('Enter the number of people attending the event:')
 
-# Prompting the user to enter the number of donuts for each person
-# DonPerPerson will store the total number of donuts for each person
+#prom use on amount of donuts for each person
 
-DonPerPerson = input('Enter the number of donuts for each person: ')
+donut_per_person = input('Enter the number of donuts for each person:')
 
-# using isnumeric() to check if the input is a numeric value
+#check if both number_of_people and donute_per_person are numeric
 
-# isnumeric() will return true if the input is a number and false if not
+if (number_of_people.isnumeric() and donut_per_person.isnumeric()):
 
-# checking if NoOfPeople and DonPerPerson are both valid numeric input
+#donuts per box
 
-if (NoOfPeople.isnumeric() and DonPerPerson.isnumeric()):
+    donuts_per_box = 12
 
-    # DonPerBox will store the number of donuts per box (12 in this case)
+# total number of donouts is number of people multiplied by donut per person
 
-    DonPerBox = 12
+    total_donuts = int(number_of_people) * int(donuts_per_box)
 
-    # total number of donuts is calculated by multiplying the
-    # NoOfPeople with the value of DonPerPerson and stored in TotalDonuts
+#minimum boxes of donuts needed divide total_donut by 12 and left over, round to nearest whole int
 
-    # int() is used to convert the input string into an integer value
+    minimum_boxes_needed = math.ceil(total_donuts / 12)
 
-    TotalDonuts = int(NoOfPeople) * int(DonPerPerson)
+#left over donuts minimum_boxes_needed * 12 - total_donuts
 
-    # minumum boxes of donuts is calculated by dividing the TotalDonuts
-    # by 12 and then finding the ceil() of the result
+    donuts_left_over = (minimum_boxes_needed * 12) - total_donuts
 
-    # example - ceil(10.6) = 11
-    # example - ceil(11.1) = 12
+#donut cost to be calculated can best to use if or else or if-elif-else method
 
-    MinBoxesNeeded = math.ceil(TotalDonuts / 12)
-
-    # total leftover donuts is calculated by finding the total number
-    # of donuts in MinBoxesNeeded and subtracting TotalDonuts from it
-
-    DonLeftOver = (MinBoxesNeeded * 12) - TotalDonuts
-
-    # using the if-elif-else to calculate the donut cost
-    # based on the number of boxes needed
-
-    if 1 <= MinBoxesNeeded <= 5:
-        DonCost = MinBoxesNeeded * 8.0
-    elif 6 <= MinBoxesNeeded <= 20:
-        DonCost = MinBoxesNeeded * 7.5
+    if 1 <= minimum_boxes_needed <= 5:
+        donut_cost = minimum_boxes_needed * 8.0
+    elif 6 <= minimum_boxes_needed <= 20:
+        donut_cost = minimum_boxes_needed * 7.5
     else:
-        DonCost = MinBoxesNeeded * 6.0
+        donut_cost = minimum_boxes_needed * 6.0
 
-    # printing the results as per the requirement
+#print the results that the model creates
 
-    print('Minimum boxes of donut needed: ', MinBoxesNeeded)
-    print('Donuts left over: ', DonLeftOver)
-    print('Donuts cost: ', DonCost)
+    print('Minimum boxes of donut needed: ', minimum_boxes_needed)
+    print('Donuts left over: ', donuts_left_over)
+    print('Donuts cost: ', donut_cost)
 
-# else part will be executed if the inputs are not a valid
+#else portion should inputs not be valid
 
 else:
-    if (NoOfPeople.isnumeric() == False):
-        print(NoOfPeople, ' is not a valid number')
-    if (DonPerPerson.isnumeric() == False):
-        print(DonPerPerson, ' is not a valid number')
+    if (number_of_people.isnumeric() == False):
+        print(number_of_people, ' is not a valid number')
+    if (donut_per_person.isnumeric() == False):
+        print(donut_per_person, ' is not a valid number')
